@@ -19,7 +19,7 @@ const search = async (e) => {
         append(data.articles, container);
 
         console.log(data)
-        //window.location.href="search.html"
+        window.location.href="search.html"
     }
 }
 
@@ -34,10 +34,9 @@ for (let el of categories) {
     el.addEventListener('click', cSearch);
 }
 
+let country = document.querySelector("#sidebar").value;
+
 function cSearch() {
-
-    let country = document.querySelector("#sidebar").value;
-
     let api = `https://masai-mock-api.herokuapp.com/news/top-headlines?country=${this.id}`;
     console.log(this.id);
     console.log(api);
@@ -48,35 +47,4 @@ function cSearch() {
         append(data.articles , container);
     });
 }
-
-// function append1(data){
-//     console.log(data)
-
-//     data.forEach(ele => {
-//         let div = document.createElement("div");
-//         div.addEventListener("click" , function(){
-//             localStorage.setItem("news" ,JSON.stringify(ele))
-//             window.location.href = "news.html";
-//         })
-
-//         let imgdiv = document.createElement("div");
-
-//         let pdiv = document.createElement("div")
-
-//         let img = document.createElement("img");
-
-//         imgdiv.append(img)
-//         let title = document.createElement("h3");
-//         let des = document.createElement("p");
-//         pdiv.append(title,des)
-
-//         img.src = ele.urlToImage
-//         title.textContent = ele.title
-//         des.textContent = ele.description
-
-//         div.append(imgdiv , pdiv)
-//         container.append(div)
-//     });
-// }
-
 
