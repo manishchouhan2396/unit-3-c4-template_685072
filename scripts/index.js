@@ -19,7 +19,7 @@ const search = async (e) => {
         append(data.articles, container);
 
         console.log(data)
-        window.location.href="search.html"
+        window.location.href = "search.html"
     }
 }
 
@@ -30,11 +30,15 @@ document.querySelector("#search_input").addEventListener("keydown", search)
 
 let categories = document.getElementById("sidebar").children;
 
-for (let el of categories) {
-    el.addEventListener('click', cSearch);
-}
+console.log(categories.length)
 
-let country = document.querySelector("#sidebar").value;
+// for (let el of categories) {
+//     el.addEventListener('click', cSearch);
+// }
+
+for (let i = 0; i < categories.length; i++) {
+    categories[i].addEventListener('click', cSearch);
+}
 
 function cSearch() {
     let api = `https://masai-mock-api.herokuapp.com/news/top-headlines?country=${this.id}`;
@@ -44,7 +48,7 @@ function cSearch() {
     Snews(api).then((data) => {
         console.log(data.articles)
         const container = document.querySelector("#results");
-        append(data.articles , container);
+        append(data.articles, container);
     });
 }
 
