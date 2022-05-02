@@ -8,3 +8,7 @@ img{
 #flex{
     display: flex;
 }
+#detailed_news{
+    width: 70%;
+    margin: auto;
+}

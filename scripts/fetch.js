@@ -12,7 +12,7 @@ const Snews = async (url) => {
 
 const append = (data, container) => {
 
-    //console.log(data.articles[0].author)
+    console.log("madhu",data[0].title)
     container.innerHTML = null;
 
     data.forEach(ele => {
