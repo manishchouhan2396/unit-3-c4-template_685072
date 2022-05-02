@@ -1,0 +1,10 @@
+img{
+    width: 70%;
+}
+#detailed_news > div >div{
+    display: flex;
+    justify-content: center;
+}
+#flex{
+    display: flex;
+}

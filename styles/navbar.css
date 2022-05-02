@@ -1,0 +1,22 @@
+#navbar{
+    display: flex;
+    gap: 10px;
+}
+img{
+    width: 200px;
+}
+#results > div{
+    display: flex;
+    gap: 15px;
+}
+
+#flex{
+    display: flex;
+    gap: 20px;
+}
+input{
+    margin-top: 10px;
+    width: 80%;
+    height: 25px;
+    border-radius: 10px;
+}
